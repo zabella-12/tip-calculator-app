@@ -5,12 +5,12 @@ let numPessoa = document.querySelector('#number-people').value;
 let sumPerson = document.querySelector('#tip-person').innerHTML = '0.00'
 let totalPerson = document.querySelector('#total').innerHTML = '0.00'
 
-addEventListener('change', () => {
+totalConta.addEventListener('change', () => {
     totalConta = document.querySelector('#number-check').value
     totalConta = parseFloat(totalConta)
 })
 
-addEventListener('change', () => {
+numPessoa.addEventListener('change', () => {
     numPessoa = document.querySelector('#number-people').value
     numPessoa = parseInt(numPessoa)
 
@@ -40,19 +40,16 @@ for (let i = 0; i < listaDeBotao.length; i++) {
         })
     }
 
-    //calculo conta por pessoa comissão variável
-    comissaoCustom.onclick = function () {      
-        }
-    }
-    
-    addEventListener('change', () => {
-        comissaoCustom = document.querySelector('.custom').value;
-        comissaoCustom = parseFloat(comissaoCustom)
-    
-                const qtdPessoa = totalConta / numPessoa
-                let checkPerson = qtdPessoa * (comissaoCustom/100)
-                let checkTotal = (qtdPessoa * (comissaoCustom/100)) + qtdPessoa
-        
-                 sumPerson = document.querySelector('#tip-person').innerHTML = checkPerson.toFixed(2)
-                 totalPerson = document.querySelector('#total').innerHTML = checkTotal.toFixed(2)
-    })
+}
+
+addEventListener('change', () => {
+    comissaoCustom = document.querySelector('.custom').value;
+    comissaoCustom = parseFloat(comissaoCustom)
+
+    const qtdPessoa = totalConta / numPessoa
+    let checkPerson = qtdPessoa * (comissaoCustom / 100)
+    let checkTotal = (qtdPessoa * (comissaoCustom / 100)) + qtdPessoa
+
+    sumPerson = document.querySelector('#tip-person').innerHTML = checkPerson.toFixed(2)
+    totalPerson = document.querySelector('#total').innerHTML = checkTotal.toFixed(2)
+})
