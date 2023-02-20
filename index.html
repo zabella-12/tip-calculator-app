@@ -22,21 +22,25 @@
     <div class="content">
 
       <h1>Bill</h1>
-      <input type="number" placeholder="0" id="number-check">
+      <form action="#">
+        <input type="number" placeholder="0" id="number-check" value="">
 
-      <h1>Select Tip %</h1>
-      <div class="percent-buttons">
-        <button type="button" class="percent">5%</button>
-        <button type="button" class="percent">10%</button>
-        <button type="button" class="percent">15%</button>
-        <button type="button" class="percent">25%</button>
-        <button type="button" class="percent">50%</button>
-        <input type="number" class="custom" placeholder="Custom">
-       
-      </div>
+        <h1>Select Tip %</h1>
+        <div class="percent-buttons">
+          <button type="button" id="valor_5" class="percent" value="5">5%</button>
+          <button type="button" id="valor_10" class="percent" value="10">10%</button>
+          <button type="button" id="valor_15" class="percent" value="15">15%</button>
+          <button type="button" id="valor_25" class="percent" value="25">25%</button>
+          <button type="button" id="valor_50" class="percent" value="50">50%</button>
+          <input type="number" class="custom" id="custom" placeholder="Custom" value="">
 
-      <h1>Number of People</h1>
-      <input type="number" placeholder="0" id="number-people">
+        </div>
+
+        <div class="peoples">
+          <h1>Number of People</h1>
+          <span class="messagen"></span>
+        </div>
+        <input type="number" placeholder="0" id="number-people" value="1" minlength="1" required>
     </div>
 
     <div class="results">
@@ -62,10 +66,13 @@
     </div>
   </div>
 
+
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Isabella Castro &#128007</a>.
   </div>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
