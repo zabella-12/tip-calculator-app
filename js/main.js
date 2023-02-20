@@ -5,12 +5,12 @@ let numPessoa = document.querySelector('#number-people').value;
 let sumPerson = document.querySelector('#tip-person').innerHTML = '0.00'
 let totalPerson = document.querySelector('#total').innerHTML = '0.00'
 
-totalConta.addEventListener('change', () => {
+addEventListener('change', () => {
     totalConta = document.querySelector('#number-check').value
     totalConta = parseFloat(totalConta)
 })
 
-numPessoa.addEventListener('change', () => {
+addEventListener('change', () => {
     numPessoa = document.querySelector('#number-people').value
     numPessoa = parseInt(numPessoa)
 
