@@ -2,7 +2,8 @@ let totalConta = document.querySelector('#number-check')
 let listaDeBotao = document.querySelectorAll('.percent')
 let comissaoCustom = document.querySelector('.custom')
 let numPessoa = document.querySelector('#number-people').value;
-
+let sumPerson = document.querySelector('#tip-person').innerHTML = '0.00'
+let totalPerson = document.querySelector('#total').innerHTML = '0.00'
 
 addEventListener('change', () => {
     totalConta = document.querySelector('#number-check').value
@@ -33,9 +34,9 @@ for (let i = 0; i < listaDeBotao.length; i++) {
             const comissao = valorComissao / 100
             const qtdPessoa = totalConta / numPessoa
             let checkPerson = qtdPessoa * comissao
-            let sumPerson = document.querySelector('#tip-person').innerHTML = checkPerson.toFixed(2)
+            sumPerson = document.querySelector('#tip-person').innerHTML = checkPerson.toFixed(2)
             let checkTotal = (qtdPessoa * comissao) + qtdPessoa
-            let totalPerson = document.querySelector('#total').innerHTML = checkTotal.toFixed(2)
+            totalPerson = document.querySelector('#total').innerHTML = checkTotal.toFixed(2)
         })
     }
 
@@ -52,6 +53,6 @@ for (let i = 0; i < listaDeBotao.length; i++) {
                 let checkPerson = qtdPessoa * (comissaoCustom/100)
                 let checkTotal = (qtdPessoa * (comissaoCustom/100)) + qtdPessoa
         
-                let sumPerson = document.querySelector('#tip-person').innerHTML = checkPerson.toFixed(2)
-                let totalPerson = document.querySelector('#total').innerHTML = checkTotal.toFixed(2)
+                 sumPerson = document.querySelector('#tip-person').innerHTML = checkPerson.toFixed(2)
+                 totalPerson = document.querySelector('#total').innerHTML = checkTotal.toFixed(2)
     })
